@@ -44,12 +44,11 @@ def sendMail(subject, receivers, cc, content, atts):
     if atts != -1 and atts != '':
         for att in atts.split(','):
             os.path.isfile(att)
-            attname = att.split('/')
+            name = os.path.basename(att)
             att = MIMEText(open(att).read(), 'base64', 'utf-8')
             att["Content-Type"] = 'application/octet-stream'
-            att["Content-Disposition"] = 'attachment; filename="%s"' %attname[-1]
+            att["Content-Disposition"] = 'attachment; filename=%s' % name.decode('utf-8').encode('gbk')
             msg.attach(att)
-
     smtp = smtplib.SMTP()
     smtp.connect(SMTPSERVER)
     smtp.login(USERNAME, APIKEY)
