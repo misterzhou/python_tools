@@ -28,7 +28,8 @@ def sendMail(subject, receivers, cc, content, atts):
     msg['Subject'] = unicode(subject, "UTF-8")
     msg['From'] = SENDER
     msg['To'] = receivers
-    msg['Cc'] = cc
+    if cc != '':
+        msg['Cc'] = cc
     
     #邮件内容
     if os.path.isfile(content):
@@ -54,8 +55,9 @@ def sendMail(subject, receivers, cc, content, atts):
     smtp.login(USERNAME, APIKEY)
     for recev in receivers.split(','):
         smtp.sendmail(SENDER,recev, msg.as_string())
-    for c in cc.split(','):
-        smtp.sendmail(SENDER,c, msg.as_string())
+    if cc != '':
+        for c in cc.split(','):
+            smtp.sendmail(SENDER,c, msg.as_string())
     smtp.quit()
 
 def main():
