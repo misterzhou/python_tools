@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
-# Author: guojing
+# Author: mason
 # Date: 2014-10-23
 # Purpose: 发送邮件
 
@@ -9,7 +9,7 @@
 Parameters：主题、接受者(多个用','分割)、抄送(多个用','分割)、内容(可以是文件)、附件(多个用','分割)
 '''
 
-__author__ = 'guojing'
+__author__ = 'mason'
 
 import email,sys,os
 import smtplib
