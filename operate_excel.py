@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
-# Author: guojing
+# Author: mason
 # Date: 2014-10-29
 # Filename: operate_excel.py
 
@@ -9,7 +9,7 @@ python读写Excel
 Require: 需要先安装Python模块: xlrd xlwt xlutils
 '''
 
-__author__ = 'guojing'
+__author__ = 'mason'
 
 from xlrd import open_workbook
 import xlwt
