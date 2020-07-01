@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
-# Author: guojing
+# Author: mason
 # Date: 2014-10-29
 # Filename: db_conn.py
 # Purpose: 数据库连接
@@ -10,7 +10,7 @@ DB Connection Mysql数据库链接
 注：需安装Mysql驱动: mysql-connector-python'
 '''
 
-__author__ = 'guojing'
+__author__ = 'mason'
 
 import mysql.connector
 
